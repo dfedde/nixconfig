@@ -23,7 +23,6 @@
     programs.zsh = {
     	enable = true;
 	shellAliases = {
-		vim = "nvim";
 	};
 
     };
@@ -31,6 +30,7 @@
     programs.neovim = {
     	enable = true;
 	defaultEditor = true;
+	vimAlias = true;
     };
   };
 }
