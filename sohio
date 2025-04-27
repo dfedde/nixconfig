@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-# git add .
-# git commit
+git add .
+git commit
 sudo nixos-rebuild -I nixos-config=configuration.nix switch
