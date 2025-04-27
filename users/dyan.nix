@@ -31,6 +31,7 @@
     	enable = true;
 	defaultEditor = true;
 	vimAlias = true;
+	extraPackages = [ pkgs.stdenv ]; # this is a hack so lazy can do some compiling
     };
 
     xdg.configFile.nvim = {
