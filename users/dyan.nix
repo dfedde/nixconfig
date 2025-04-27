@@ -21,7 +21,11 @@
     };
 
     programs.zsh = {
-    	enable = true
+    	enable = true;
+	shellAliases = {
+		vim = "nvim";
+	};
+
     };
   };
 }
