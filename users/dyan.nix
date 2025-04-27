@@ -1,12 +1,12 @@
 
 { config, pkgs, ... }: {
 
+  programs.zsh.enable = true;
   users.users.dyan = {
     isNormalUser = true;
     description = "it's me";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
-    ignoreShellProgramCheck = true;
   };
 
   home-manager.users.dyan = { pkgs, ... }: {
