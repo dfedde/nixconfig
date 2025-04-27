@@ -19,5 +19,9 @@
 	userName = "dyan Fedde";
 	userEmail = "dyan@fedde.us";
     };
+
+    programs.zsh = {
+    	enable = true
+    };
   };
 }
