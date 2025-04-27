@@ -5,7 +5,7 @@
     isNormalUser = true;
     description = "it's me";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkg.zsh
+    shell = pkg.zsh;
   };
 
   home-manager.users.dyan = { pkgs, ... }: {
