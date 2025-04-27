@@ -1,0 +1,23 @@
+
+{ config, pkgs, ... }: {
+
+  users.users.dyan = {
+    isNormalUser = true;
+    description = "it's me";
+    extraGroups = [ "networkmanager" "wheel" ];
+  };
+
+  home-manager.users.dyan = { pkgs, ... }: {
+    programs.bash.enable = true;
+  
+    # The state version is required and should stay at the version you
+    # originally installed.
+    home.stateVersion = "24.11";
+
+    programs.git = {
+    	enable = true;
+	userName = "dyan Fedde";
+	userEmail = "dyan@fedde.us";
+    };
+  };
+}
