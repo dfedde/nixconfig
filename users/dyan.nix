@@ -1,6 +1,7 @@
 
 { config, pkgs, ... }: {
 
+
   programs.zsh.enable = true;
   users.users.dyan = {
     isNormalUser = true;
