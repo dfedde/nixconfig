@@ -44,6 +44,7 @@
 			vimAlias = true;
 			extraPackages = [
 			pkgs.gcc
+			pkgs.nodejs_23
 			pkgs.lua-language-server
 			]; # this is a hack so lazy can do some compiling
 		};
