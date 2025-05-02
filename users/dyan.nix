@@ -42,7 +42,10 @@
 			enable = true;
 			defaultEditor = true;
 			vimAlias = true;
-			extraPackages = [ pkgs.gcc pkgs.cargo ]; # this is a hack so lazy can do some compiling
+			extraPackages = [
+			pkgs.gcc
+			pkgs.lua-language-server
+			]; # this is a hack so lazy can do some compiling
 		};
 
 		programs.ssh = {

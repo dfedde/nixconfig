@@ -9,13 +9,13 @@ require("neodev").setup{} -- Visuals
 --                                       |\       /| 
 --                                       |/       \| 
 -- LSP installer
-require("mason").setup{}
-require("mason-lspconfig").setup{
-	ensure_installed = {"lua_ls", "nil_ls"},
-}
-
-
-local lspconfig = require('lspconfig')
+-- require("mason").setup{}
+-- require("mason-lspconfig").setup{
+-- 	ensure_installed = {"lua_ls", "nil_ls"},
+-- }
+--
+--
+-- local lspconfig = require('lspconfig')
 -- local navic = require("nvim-navic")
 
 -- lspconfig.clangd.setup {
@@ -33,6 +33,7 @@ lspconfig.lua_ls.setup({
     }
   }
 })
+lspconfig.nil_ls.setup()
 --
 -- vim.api.nvim_create_autocmd('FileType', {
 --   pattern = 'sh',
