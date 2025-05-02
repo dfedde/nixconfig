@@ -45,9 +45,9 @@
       enable = true;
       defaultEditor = true;
       vimAlias = true;
+      withNodeJs = true;
       extraPackages = [
         pkgs.gcc
-          pkgs.nodejs_23
           pkgs.lua-language-server
           pkgs.nil
       ]; # this is a hack so lazy can do some compiling
@@ -63,6 +63,7 @@
       enableZshIntegration = true;
       settings = {
         inline_height = 10;
+        enter_accept = false;
       };
     };
 
