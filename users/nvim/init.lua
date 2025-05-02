@@ -35,7 +35,7 @@ lspconfig.lua_ls.setup({
   }
 })
 
--- lspconfig.nil_ls.setup()
+lspconfig.nil_ls.setup({})
 --
 -- vim.api.nvim_create_autocmd('FileType', {
 --   pattern = 'sh',
