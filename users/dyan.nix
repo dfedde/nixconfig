@@ -2,7 +2,11 @@
 { config, pkgs, ... }: {
 
 
-  programs.zsh.enable = true;
+  programs = {
+  zsh.enable = true;
+  _1password.enable = true;
+  };
+
   users.users.dyan = {
     isNormalUser = true;
     description = "it's me";

@@ -8,6 +8,4 @@ in
     [
       (import "${home-manager}/nixos")
     ];
-
-
 }

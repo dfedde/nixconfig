@@ -10,7 +10,6 @@
       ./hardware-configuration.nix
       ./home-manager.nix
       ./users/dyan.nix
-      # ./users/nixvim.nix
     ];
 
   # Bootloader.
