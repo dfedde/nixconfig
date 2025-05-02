@@ -60,7 +60,7 @@ vim.wo.number = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop=2
 vim.opt.shiftwidth=2
-vim.expandtab = true
+vim.opt.expandtab = true
 vim.opt.list = true
 vim.opt.listchars= 'tab:>-'
 
@@ -76,7 +76,7 @@ else
 --   |   |  |  / \_|   |  /  |  |/  / \_
 --    \_/   |_/ \/  \_/|_/\_/|_/|__/ \/ 
 --
-require("config.statusline") -- statusline
+-- require("config.statusline") -- statusline
 
 
 --  ,__ __                                               
