@@ -24,15 +24,15 @@ require("mason-lspconfig").setup{
 --     end
 -- }
 --
--- lspconfig.lua_ls.setup({
---   settings = {
---     Lua = {
---       completion = {
---         callSnippet = "Replace"
---       }
---     }
---   }
--- })
+lspconfig.lua_ls.setup({
+  settings = {
+    Lua = {
+      completion = {
+        callSnippet = "Replace"
+      }
+    }
+  }
+})
 --
 -- vim.api.nvim_create_autocmd('FileType', {
 --   pattern = 'sh',
