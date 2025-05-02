@@ -28,6 +28,11 @@
 
 		programs.zsh = {
 			enable = true;
+			zplug = {
+				enable = true;
+				plugins = [
+				];
+			};
 			shellAliases = {
 			};
 
@@ -43,7 +48,8 @@
 		programs.ssh = {
 			enable = true;
 			extraConfig = ''
-IdentityAgent ~/.1password/agent.sock
+			Host *
+				IdentityAgent ~/.1password/agent.sock
 				'';
 		};
 
