@@ -35,7 +35,15 @@ lspconfig.lua_ls.setup({
   }
 })
 
-lspconfig.nil_ls.setup({})
+lspconfig.nil_ls.setup({
+   settings = {
+      ['nil'] = {
+         formatting = {
+            command = { "nixfmt" },
+         },
+      },
+   },
+})
 --
 -- vim.api.nvim_create_autocmd('FileType', {
 --   pattern = 'sh',

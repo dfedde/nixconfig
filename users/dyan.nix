@@ -46,10 +46,11 @@
       defaultEditor = true;
       vimAlias = true;
       withNodeJs = true;
-      extraPackages = [
-        pkgs.gcc
-          pkgs.lua-language-server
-          pkgs.nil
+      extraPackages = with pkgs; [
+        gcc
+          lua-language-server
+          nil
+          nixfmt-rfc-style
       ];
       plugins = with pkgs; with vimPlugins; [
       nvim-treesitter-parsers.nix
