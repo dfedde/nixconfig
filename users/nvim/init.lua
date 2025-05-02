@@ -10,42 +10,46 @@ require("neodev").setup{} -- Visuals
 --                                       |/       \| 
 -- LSP installer
 require("mason").setup{}
-
-local lspconfig = require('lspconfig')
-local navic = require("nvim-navic")
-
-lspconfig.clangd.setup {
-    on_attach = function(client, bufnr)
-        navic.attach(client, bufnr)
-    end
+require("mason-lspconfig").setup{
+	ensure_installed = {"lua_ls"},
 }
 
-lspconfig.lua_ls.setup({
-  settings = {
-    Lua = {
-      completion = {
-        callSnippet = "Replace"
-      }
-    }
-  }
-})
 
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'sh',
-  callback = function()
-    vim.lsp.start({
-      name = 'bash-language-server',
-      cmd = { 'bash-language-server', 'start' },
-    })
-  end,
-})
+-- local lspconfig = require('lspconfig')
+-- local navic = require("nvim-navic")
 
--- GDscript
-lspconfig.gdscript.setup{}
-lspconfig.bacon_ls.setup{}
-
--- typescript
-lspconfig.ts_ls.setup{}
+-- lspconfig.clangd.setup {
+--     on_attach = function(client, bufnr)
+--         navic.attach(client, bufnr)
+--     end
+-- }
+--
+-- lspconfig.lua_ls.setup({
+--   settings = {
+--     Lua = {
+--       completion = {
+--         callSnippet = "Replace"
+--       }
+--     }
+--   }
+-- })
+--
+-- vim.api.nvim_create_autocmd('FileType', {
+--   pattern = 'sh',
+--   callback = function()
+--     vim.lsp.start({
+--       name = 'bash-language-server',
+--       cmd = { 'bash-language-server', 'start' },
+--     })
+--   end,
+-- })
+--
+-- -- GDscript
+-- lspconfig.gdscript.setup{}
+-- lspconfig.bacon_ls.setup{}
+--
+-- -- typescript
+-- lspconfig.ts_ls.setup{}
 
 
 vim.wo.number = true

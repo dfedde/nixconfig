@@ -56,6 +56,7 @@ return {
 
 	-- LSP
 	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
 
 	--                                  
 	--   ()                             
