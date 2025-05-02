@@ -42,7 +42,7 @@
 			enable = true;
 			defaultEditor = true;
 			vimAlias = true;
-			extraPackages = [ pkgs.gcc ]; # this is a hack so lazy can do some compiling
+			extraPackages = [ pkgs.gcc pkgs.cargo ]; # this is a hack so lazy can do some compiling
 		};
 
 		programs.ssh = {
