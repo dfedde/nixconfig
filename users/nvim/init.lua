@@ -50,6 +50,13 @@ lspconfig.ts_ls.setup{}
 
 vim.wo.number = true
 
+sane tabbing
+vim.opt.tabstop = 2
+vim.opt.softtabstop=2
+vim.opt.shiftwidth=2
+vim.expandtab = True
+
+
 if (vim.g.vscode) then
     -- VSCode extension
 else
