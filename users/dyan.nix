@@ -43,16 +43,17 @@
 			defaultEditor = true;
 			vimAlias = true;
 			extraPackages = [
-			pkgs.gcc
-			pkgs.nodejs_23
-			pkgs.lua-language-server
+				pkgs.gcc
+					pkgs.nodejs_23
+					pkgs.lua-language-server
+					pkgs.nil
 			]; # this is a hack so lazy can do some compiling
 		};
 
 		programs.ssh = {
 			enable = true;
 			extraConfig = ''
-			Host *
+				Host *
 				IdentityAgent ~/.1password/agent.sock
 				'';
 		};
