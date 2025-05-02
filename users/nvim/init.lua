@@ -11,7 +11,7 @@ require("neodev").setup{} -- Visuals
 -- LSP installer
 require("mason").setup{}
 require("mason-lspconfig").setup{
-	ensure_installed = {"lua_ls"},
+	ensure_installed = {"lua_ls", "nil_ls"},
 }
 
 
