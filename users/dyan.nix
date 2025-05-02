@@ -40,7 +40,13 @@
 	extraPackages = [ pkgs.gcc ]; # this is a hack so lazy can do some compiling
     };
 
-    programs.ssh.matchBlocks."*".IdentityAgent = "~/.1password/agent.sock";
+    programs.ssh = {
+        enable = true;
+	extraConfig = ''
+		Host *
+			IdentityAgent ~/.1password/agent.sock
+	'';
+	};
 
     xdg.configFile.nvim = {
     	source = ./nvim;
