@@ -24,6 +24,9 @@
       nerdfonts
     ];
 
+    programs.alacritty = {
+      enable = true;
+    };
     programs.git = {
       enable = true;
       userName = "dyan Fedde";
