@@ -50,7 +50,10 @@
         pkgs.gcc
           pkgs.lua-language-server
           pkgs.nil
-      ]; # this is a hack so lazy can do some compiling
+      ];
+      plugins = with pkgs; with vimPlugins; [
+      nvim-treesitter-parsers.nix
+      ];
     };
 
     programs.starship = {
