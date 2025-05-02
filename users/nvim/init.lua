@@ -15,7 +15,6 @@ require("neodev").setup{} -- Visuals
 -- }
 --
 --
--- local lspconfig = require('lspconfig')
 -- local navic = require("nvim-navic")
 
 -- lspconfig.clangd.setup {
@@ -24,6 +23,7 @@ require("neodev").setup{} -- Visuals
 --     end
 -- }
 --
+local lspconfig = require('lspconfig')
 lspconfig.lua_ls.setup({
   settings = {
     Lua = {
