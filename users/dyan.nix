@@ -58,6 +58,11 @@
       enableZshIntegration = true;
     };
 
+    programs.atuin = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
     programs.ssh = {
       enable = true;
       extraConfig = ''
