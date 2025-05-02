@@ -27,6 +27,7 @@
     programs.alacritty = {
       enable = true;
     };
+
     programs.git = {
       enable = true;
       userName = "dyan Fedde";
@@ -50,6 +51,11 @@
           pkgs.lua-language-server
           pkgs.nil
       ]; # this is a hack so lazy can do some compiling
+    };
+
+    programs.starship = {
+      enable = true;
+      enableZshIntegration = true;
     };
 
     programs.ssh = {
