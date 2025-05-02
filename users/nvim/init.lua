@@ -24,6 +24,7 @@ require("neodev").setup{} -- Visuals
 -- }
 --
 local lspconfig = require('lspconfig')
+
 lspconfig.lua_ls.setup({
   settings = {
     Lua = {
@@ -33,7 +34,8 @@ lspconfig.lua_ls.setup({
     }
   }
 })
-lspconfig.nil_ls.setup()
+
+-- lspconfig.nil_ls.setup()
 --
 -- vim.api.nvim_create_autocmd('FileType', {
 --   pattern = 'sh',
