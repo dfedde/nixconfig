@@ -44,6 +44,15 @@ lspconfig.nil_ls.setup({
       },
    },
 })
+
+require("conform").setup({
+  format_on_save = {
+    -- These options will be passed to conform.format()
+    timeout_ms = 500,
+    lsp_format = "fallback",
+  },
+  nix = { "nixfmt" }
+})
 --
 -- vim.api.nvim_create_autocmd('FileType', {
 --   pattern = 'sh',

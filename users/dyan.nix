@@ -54,6 +54,7 @@
       ];
       plugins = with pkgs; with vimPlugins; [
       nvim-treesitter-parsers.nix
+      conform-nvim
       ];
     };
 
