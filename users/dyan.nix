@@ -26,7 +26,13 @@
 
       home.packages = with pkgs; [
         nerdfonts
+        podman
+        podman-compose
       ];
+
+      services = {
+        podman.enable = true;
+      };
 
       programs = {
         alacritty = {
@@ -44,6 +50,7 @@
           syntaxHighlighting.enable = true;
           shellAliases = {
             gst = "git status";
+            docker = "podman";
           };
         };
 
