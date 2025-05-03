@@ -41,6 +41,7 @@
 
         zsh = {
           enable = true;
+          syntaxHighlighting.enable = true;
           shellAliases = {
             gst = "git status";
           };
