@@ -1,13 +1,13 @@
 require("config.lazy")
 require("config.niceities") -- My hot keys
-require("neodev").setup{} -- Visuals
---    _        , __     ___               _          
--- \_|_)    ()/|/  \   / (_)             | | o       
---   |      /\ |___/  |      __   _  _   | |     __, 
---  _|     /  \|      |     /  \_/ |/ |  |/  |  /  | 
+require("neodev").setup {}  -- Visuals
+--    _        , __     ___               _
+-- \_|_)    ()/|/  \   / (_)             | | o
+--   |      /\ |___/  |      __   _  _   | |     __,
+--  _|     /  \|      |     /  \_/ |/ |  |/  |  /  |
 -- (/\___//(__/|       \___/\__/   |  |_/|__/|_/\_/|/
---                                       |\       /| 
---                                       |/       \| 
+--                                       |\       /|
+--                                       |/       \|
 -- LSP installer
 -- require("mason").setup{}
 -- require("mason-lspconfig").setup{
@@ -36,13 +36,13 @@ lspconfig.lua_ls.setup({
 })
 
 lspconfig.nil_ls.setup({
-   settings = {
-      ['nil'] = {
-         formatting = {
-            command = { "nixfmt" },
-         },
+  settings = {
+    ['nil'] = {
+      formatting = {
+        command = { "nixfmt" },
       },
-   },
+    },
+  },
 })
 
 require("conform").setup({
@@ -51,7 +51,8 @@ require("conform").setup({
     timeout_ms = 500,
     lsp_format = "fallback",
   },
-  nix = { "nixfmt" }
+  nix = { "nixfmt" },
+  lua = { "stylua" },
 })
 --
 -- vim.api.nvim_create_autocmd('FileType', {
@@ -75,40 +76,40 @@ require("conform").setup({
 vim.wo.number = true
 
 vim.opt.tabstop = 2
-vim.opt.softtabstop=2
-vim.opt.shiftwidth=2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.list = true
-vim.opt.listchars= 'tab:>-'
+vim.opt.listchars = 'tab:>-'
 
 
 if (vim.g.vscode) then
-    -- VSCode extension
+  -- VSCode extension
 else
--- Lazy package manager
+  -- Lazy package manager
 
---  _                            _      
--- (_|   |_/o                   | |     
---   |   |      ,          __,  | |  ,  
---   |   |  |  / \_|   |  /  |  |/  / \_
---    \_/   |_/ \/  \_/|_/\_/|_/|__/ \/ 
---
--- require("config.statusline") -- statusline
+  --  _                            _
+  -- (_|   |_/o                   | |
+  --   |   |      ,          __,  | |  ,
+  --   |   |  |  / \_|   |  /  |  |/  / \_
+  --    \_/   |_/ \/  \_/|_/\_/|_/|__/ \/
+  --
+  -- require("config.statusline") -- statusline
 
 
---  ,__ __                                               
--- /|  |  |                                              
---  |  |  |   __        _   _  _  _    _   _  _  _|_  ,  
---  |  |  |  /  \_|  |_|/  / |/ |/ |  |/  / |/ |  |  / \_
---  |  |  |_/\__/  \/  |__/  |  |  |_/|__/  |  |_/|_/ \/ 
---
--- netrw replacement
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-require("oil").setup{
-	view_options = {
-		-- Show files and directories that start with "."
-		show_hidden = true
-	}
-}
-require("config.telescope")
+  --  ,__ __
+  -- /|  |  |
+  --  |  |  |   __        _   _  _  _    _   _  _  _|_  ,
+  --  |  |  |  /  \_|  |_|/  / |/ |/ |  |/  / |/ |  |  / \_
+  --  |  |  |_/\__/  \/  |__/  |  |  |_/|__/  |  |_/|_/ \/
+  --
+  -- netrw replacement
+  vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+  require("oil").setup {
+    view_options = {
+      -- Show files and directories that start with "."
+      show_hidden = true
+    }
+  }
+  require("config.telescope")
 end
