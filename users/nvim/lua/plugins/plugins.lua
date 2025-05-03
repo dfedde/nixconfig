@@ -206,7 +206,7 @@ return {
 
 	-- to work better with tmux
 	"sjl/vitality.vim",
-
+'stevearc/conform.nvim',
 	--  for terraform 
 	"hashivim/vim-terraform",
 	"juliosueiras/vim-terraform-completion",

@@ -54,19 +54,6 @@
       ];
       plugins = with pkgs; with vimPlugins; [
       nvim-treesitter-parsers.nix
-      {
-      plugin = conform-nvim;
-      config = ''
-	require("conform").setup({
-	  format_on_save = {
-	    -- These options will be passed to conform.format()
-	    timeout_ms = 500,
-	    lsp_format = "fallback",
-	  },
-	  nix = { "nixfmt" }
-	})
-      '';
-      }
       ];
     };
 
