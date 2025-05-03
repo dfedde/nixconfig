@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
 
+  imports = [ ./fun.nix ];
   programs = {
     zsh.enable = true;
     _1password.enable = true;
