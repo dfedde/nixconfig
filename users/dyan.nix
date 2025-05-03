@@ -28,66 +28,67 @@
         nerdfonts
       ];
 
-      programs.alacritty = {
-        enable = true;
-      };
-
-      programs.git = {
-        enable = true;
-        userName = "dyan Fedde";
-        userEmail = "dyan@fedde.us";
-      };
-
-      programs.zsh = {
-        enable = true;
-        shellAliases = {
-          gst = "git status";
+      programs = {
+        alacritty = {
+          enable = true;
         };
-      };
 
-      programs.neovim = {
-        enable = true;
-        defaultEditor = true;
-        vimAlias = true;
-        withNodeJs = true;
-        extraPackages = with pkgs; [
-          gcc
-          lua-language-server
-          nil
-          #formatters
-          nixfmt-rfc-style
-          stylua
-        ];
-        plugins =
-          with pkgs;
-          with vimPlugins;
-          [
-            nvim-treesitter-parsers.nix
+        git = {
+          enable = true;
+          userName = "dyan Fedde";
+          userEmail = "dyan@fedde.us";
+        };
+
+        zsh = {
+          enable = true;
+          shellAliases = {
+            gst = "git status";
+          };
+        };
+
+        neovim = {
+          enable = true;
+          defaultEditor = true;
+          vimAlias = true;
+          withNodeJs = true;
+          extraPackages = with pkgs; [
+            gcc
+            lua-language-server
+            nil
+            #formatters
+            nixfmt-rfc-style
+            stylua
           ];
-      };
+          plugins =
+            with pkgs;
+            with vimPlugins;
+            [
+              nvim-treesitter-parsers.nix
+            ];
+        };
 
-      programs.starship = {
-        enable = true;
-        enableZshIntegration = true;
-      };
+        starship = {
+          enable = true;
+          enableZshIntegration = true;
+        };
 
-      programs.atuin = {
-        enable = true;
-        enableZshIntegration = true;
-        settings = {
-          inline_height = 10;
-          enter_accept = false;
+        atuin = {
+          enable = true;
+          enableZshIntegration = true;
+          settings = {
+            inline_height = 10;
+            enter_accept = false;
+          };
+        };
+
+        ssh = {
+          enable = true;
+          extraConfig = ''
+            Host *
+              IdentityAgent ~/.1password/agent.sock
+          '';
         };
       };
-
-      programs.ssh = {
-        enable = true;
-        extraConfig = ''
-          Host *
-            IdentityAgent ~/.1password/agent.sock
-        '';
-      };
-
       xdg.configFile.nvim = {
         source = ./nvim;
         recursive = true;
