@@ -56,6 +56,15 @@
       programs = {
         alacritty = {
           enable = true;
+          settings = {
+            font = {
+              normal = {
+                family = "VictorMonoNerdFontMono";
+                style = "normal";
+              };
+            };
+
+          };
         };
 
         git = {
