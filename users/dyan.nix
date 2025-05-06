@@ -50,6 +50,7 @@
         nerdfonts
         podman
         podman-compose
+        spotify-player
       ];
 
       programs = {
