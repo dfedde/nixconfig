@@ -118,5 +118,10 @@
         source = ./nvim;
         recursive = true;
       };
+
+      xdg.configFile.i3 = {
+        source = ./i3;
+        recursive = true;
+      };
     };
 }
