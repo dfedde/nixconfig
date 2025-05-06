@@ -6,6 +6,7 @@
     podman-tui # status of containers in the terminal
     podman-compose # start group of containers for dev
     yarn
+    nodejs_20
   ];
 
   virtualisation.containers.enable = true;
