@@ -10,6 +10,7 @@
   ];
 
   programs.adb.enable = true;
+  programs.java.enable = true;
   users.users.dyan.extraGroups = [ "adbusers" ];
 
   virtualisation.containers.enable = true;
