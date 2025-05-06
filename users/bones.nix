@@ -9,6 +9,9 @@
     nodejs_20
   ];
 
+  programs.adb.enable = true;
+  users.users.dyan.extraGroups = [ "adbusers" ];
+
   virtualisation.containers.enable = true;
   virtualisation = {
     podman = {
