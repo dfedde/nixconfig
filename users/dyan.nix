@@ -36,6 +36,7 @@
         podman-compose
         spotify-player
         obsidian
+        devenv
       ];
 
       programs = {
