@@ -7,6 +7,7 @@
     podman-compose # start group of containers for dev
     yarn
     nodejs_20
+    jdk17
   ];
 
   programs.adb.enable = true;
