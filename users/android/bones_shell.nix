@@ -48,11 +48,33 @@
   pkgs ? import <nixpkgs> {
     config = {
       android_sdk.accept_license = true;
+      allowUnfree = true;
     };
   },
 }:
 
 let
+  androidComposition = pkgs.androidenv.composeAndroidPackages {
+    platformVersions = [
+      "35"
+    ];
+    buildToolsVersions = [
+      "35.0.0"
+      "34.0.0"
+    ];
+    systemImageTypes = [ "google_apis_playstore" ];
+    extraLicenses = [ "android-sdk-preview-license" ];
+    abiVersions = [
+      "armeabi-v7a"
+      "arm64-v8a"
+    ];
+    includeNDK = true;
+    ndkVersions = [ "26.1.10909125" ];
+    cmakeVersions = [ "3.22.1" ];
+    # includeExtras = [
+    #   "extras;google;auto"
+    # ];
+  };
   fhs = pkgs.buildFHSUserEnv {
     name = "android-env";
     targetPkgs =
@@ -66,8 +88,7 @@ let
         openssl
         gnumake
         nettools
-        # For nixos < 19.03, use `androidenv.platformTools`
-        androidenv.androidPkgs.platform-tools
+        androidComposition.androidsdk
         jdk
         schedtool
         util-linux
@@ -91,10 +112,9 @@ let
     profile = ''
       export ALLOW_NINJA_ENV=true
       export USE_CCACHE=1
-      export ANDROID_JAVA_HOME=${pkgs.jdk.home}sdkmanager install avd
+      export ANDROID_JAVA_HOME=${pkgs.jdk.home}
       export LD_LIBRARY_PATH=/usr/lib:/usr/lib32
-      export ANDROID_HOME=${pkgs.androidenv.androidPkgs.platform-tools}/libexec/android-sdk
-
+      export ANDROID_HOME=${androidComposition.androidsdk}/libexec/android-sdk
     '';
   };
 in
