@@ -80,6 +80,7 @@
             #formatters
             nixfmt-rfc-style
             stylua
+            nodePackages.prettier
           ];
           plugins =
             with pkgs;
