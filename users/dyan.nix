@@ -75,6 +75,7 @@
           extraPackages = with pkgs; [
             gcc
             lua-language-server
+            typescript-language-server
             nil
             #formatters
             nixfmt-rfc-style

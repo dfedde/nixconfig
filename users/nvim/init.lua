@@ -70,7 +70,7 @@ require("conform").setup({
 -- lspconfig.bacon_ls.setup{}
 --
 -- -- typescript
--- lspconfig.ts_ls.setup{}
+lspconfig.ts_ls.setup {}
 
 
 vim.wo.number = true
